@@ -16,6 +16,8 @@ const Home = () => {
 
             <TrendingApps></TrendingApps>
 
+            
+
 
 
         </div>

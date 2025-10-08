@@ -1,6 +1,7 @@
 import React from 'react';
 import useAppsdata from '../hooks/useAppsdata';
 import Card from './Card';
+import { Link } from 'react-router';
 
 const TrendingApps = () => {
 
@@ -23,6 +24,10 @@ const TrendingApps = () => {
                 tredingApps.map(app =><Card app={app} key={app.id}></Card>)
             }
 
+            </div>
+
+            <div className='py-6 flex items-center'>
+                <Link className='bg-[#7340E7] text-white mx-auto px-23 mt-1.5 font-semibold shadow-md hover:shadow-xl py-2 rounded-md' to={"/apps"}>Show All</Link>
             </div>
 
         </div>

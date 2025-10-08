@@ -1,12 +1,13 @@
 import React from 'react';
 import downloadImg from '../assets/icon-downloads.png'
 import raingImg from '../assets/icon-ratings.png'
+import { Link } from 'react-router';
 
 // card lg:card-side
 
 const Card = ({app}) => {
-    console.log(app);
     return (
+      <Link to={`/appDetails/${app.id}`}>
 <div className="rounded-md hover:scale-103 transition ease-in-out bg-[#F8F8F8] shadow-md">
   <figure className='p-5'>
     <img
@@ -46,6 +47,7 @@ const Card = ({app}) => {
     </div>
   </div>
 </div>
+</Link>
     );
 };
 
