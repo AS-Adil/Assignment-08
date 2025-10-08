@@ -11,12 +11,13 @@ const useAppsdata = () => {
     useEffect(()=>{
 
         SetLoading(true)
-        axios()
-
-
+        axios('../appsData.json').then(data=>SetApps(data.data))
+        .catch(err =>setError(err))
+        .finally(SetLoading(false))
 
     }, [])
-
+    
+    return {apps, loading, erro}
 
 };
 

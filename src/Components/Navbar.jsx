@@ -12,8 +12,11 @@ const Navbar = () => {
     </>
 
     return (
-<div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
+<div className="navbar bg-base-100 shadow-sm px-2 sm:px-4 lg:px-16">
+
+
+
+  <div className="navbar-start ">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
@@ -26,7 +29,7 @@ const Navbar = () => {
     
       </ul>
     </div>
-    <Link to={"/"} className=" px-4 py-2 whitespace-nowrap  font-semibold rounded-full text-[#632EE3] cursor-pointer  text-xl flex gap-1 items-center">
+    <Link to={"/"} className=" py-2 whitespace-nowrap  font-semibold rounded-full text-[#632EE3] cursor-pointer  text-xl flex gap-1 items-center">
     <img src={logo} className='w-11' />
     HERO.IO</Link>
   </div>
@@ -35,20 +38,15 @@ const Navbar = () => {
 
 
 
-          <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 space-x-3">
-  {tabs}
+          <div className=" navbar-center hidden lg:flex">
+    <ul className="menu menu-horizontal space-x-5">
+
+              {tabs}
 
 
 
     </ul>
   </div>
-
-
-
-
-
-
 
 
   
@@ -62,7 +60,10 @@ const Navbar = () => {
   
     
   </div>
+
 </div>
+
+
     );
 };
 

@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.active{
+    border-bottom: 2px solid #713AE7;
+    color: #713AE7;
+}
+
+.same{
+    font-weight: 600;
+}
+
+/* body{
+    max-width: 1670px;
+    margin: auto;
+    
+} */
