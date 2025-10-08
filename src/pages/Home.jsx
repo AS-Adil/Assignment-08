@@ -1,12 +1,10 @@
 import React from 'react';
-import useAppsdata from '../hooks/useAppsdata';
 import Banner from '../Components/Banner';
 import StatesSection from '../Components/StatesSection';
+import TrendingApps from '../Components/TrendingApps';
 
 const Home = () => {
 
-    const {apps} = useAppsdata()
-    console.log(apps);
 
 
     
@@ -15,6 +13,8 @@ const Home = () => {
         <div className='bg-[#E9E9E9]'>
             <Banner></Banner>
             <StatesSection></StatesSection>
+
+            <TrendingApps></TrendingApps>
 
 
 
