@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png'
+import { VscGithub } from 'react-icons/vsc';
 
 const Navbar = () => {
 
@@ -31,16 +32,35 @@ const Navbar = () => {
   </div>
 
 
+
+
+
+          <div className="navbar-center hidden lg:flex">
+    <ul className="menu menu-horizontal px-1 space-x-3">
+  {tabs}
+
+
+
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
   
 
 
   <div className="navbar-end space-x-2.5">
-    <ul className='hidden lg:flex gap-3 items-center'>
 
-        {tabs}
+      
 
-    </ul>
-    <Link to={'/'} className="shadow-sm hover:shadow-md px-4 py-2 font-semibold rounded-md text-white bg-gray-600 hover:bg-gray-800">Visit Shop</Link>
+    <a href='https://github.com/' target='blank'  className="shadow-sm hover:shadow-md px-4 py-2 font-semibold rounded-md text-lg text-white bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]  flex items-center gap-1.5"> <VscGithub size={20} className=' rounded-full bg-white text-black mt-1'></VscGithub>Contribute</a>
+  
+    
   </div>
 </div>
     );
