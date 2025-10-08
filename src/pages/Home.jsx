@@ -1,6 +1,7 @@
 import React from 'react';
 import useAppsdata from '../hooks/useAppsdata';
 import Banner from '../Components/Banner';
+import StatesSection from '../Components/StatesSection';
 
 const Home = () => {
 
@@ -11,8 +12,9 @@ const Home = () => {
     
 
     return (
-        <div className='bg-[#E9E9E9]  px-2 sm:px-4 lg:px-16'>
+        <div className='bg-[#E9E9E9]'>
             <Banner></Banner>
+            <StatesSection></StatesSection>
 
 
 
