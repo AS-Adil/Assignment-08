@@ -5,6 +5,8 @@ import Card from './Card';
 const TrendingApps = () => {
 
     const {apps} = useAppsdata()
+    const tredingApps = apps.slice(0,8)
+    
 
 
     return (
@@ -18,7 +20,7 @@ const TrendingApps = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 
             {
-                apps.map(app =><Card app={app} key={app.id}></Card>)
+                tredingApps.map(app =><Card app={app} key={app.id}></Card>)
             }
 
             </div>
