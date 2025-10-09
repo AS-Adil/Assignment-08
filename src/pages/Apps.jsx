@@ -1,10 +1,16 @@
 
+import { useState } from 'react';
 import AppsContent from '../Components/AppsContent';
 import useAppsdata from '../hooks/useAppsdata';
 
 const Apps = () => {
 
     const {apps} = useAppsdata()
+    const [search, setSearch] = useState('')
+    const term = search.trim().toLocaleLowerCase()
+    const searchedApps = search ? apps.filter(ap=>ap.title.toLocaleLowerCase().includes(term)) : apps;
+
+    console.log(search);
 
     return (
         <div className="px-2 sm:px-4 lg:px-16 bg-[#E9E9E9]">
@@ -18,16 +24,21 @@ const Apps = () => {
 
                         <div className='flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between py-5 items-center'>
                 <div className='text-xl font-semibold '>
-                    <h1>({apps.length})<span className='ml-1.5'>Apps found</span></h1>
+                    <h1>({searchedApps.length})<span className='ml-1.5'>Apps found</span></h1>
                 </div>
 
 
                 <div>
-                    <button className='btn btn-primary'>button</button>
+                    <label className="floating-label">
+                    <input type="search"
+                    onChange={e =>setSearch(e.target.value) }
+                    placeholder="Search" className="input input-md" />
+                    <span>Search</span>
+                    </label>
                 </div>
             </div>
 
-            <AppsContent></AppsContent>
+            <AppsContent searchedApps={searchedApps}></AppsContent>
 
 
         </div>
