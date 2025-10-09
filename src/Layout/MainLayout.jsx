@@ -1,30 +1,18 @@
-import React, { createContext, useState } from 'react';
-import Navbar from '../Components/Navbar';
-import { Outlet } from 'react-router';
-import Footer from '../Components/Footer';
-
-export const InstallContext = createContext(false)
+import Navbar from "../Components/Navbar";
+import { Outlet } from "react-router";
+import Footer from "../Components/Footer";
 
 const MainLayout = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar></Navbar>
 
-const [isInstalled, setIsInstalled] = useState(false)
-
-
-    return (
-
-        <div className='flex flex-col min-h-screen'>
-            <Navbar></Navbar>
-
-            <div className='flex-1 '>
-            <InstallContext.Provider value={[isInstalled, setIsInstalled]}>
-
-                <Outlet></Outlet>
-
-                </InstallContext.Provider>
-            </div>
-            <Footer></Footer>
-        </div>
-    );
+      <div className="flex-1 ">
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default MainLayout;
