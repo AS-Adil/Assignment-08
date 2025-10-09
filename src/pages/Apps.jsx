@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import AppsContent from '../Components/AppsContent';
 import useAppsdata from '../hooks/useAppsdata';
+import NoAppsFound from '../Components/NoAppsFound';
 
 const Apps = () => {
 
@@ -15,7 +16,7 @@ const Apps = () => {
     return (
         <div className="px-2 sm:px-4 lg:px-16 bg-[#E9E9E9]">
 
-                       <div className='text-center pt-17 pb-19 space-y-3'>
+                       <div className='text-center pt-17 pb-8 space-y-3'>
         <h1 className='text-4xl font-bold '>Our All Applications</h1>
         <p className='text-gray-600'>Explore All Apps on the Market developed by us. We code for Millions</p>
 
@@ -38,7 +39,12 @@ const Apps = () => {
                 </div>
             </div>
 
-            <AppsContent searchedApps={searchedApps}></AppsContent>
+
+        {
+            searchedApps.length===0 ? <NoAppsFound></NoAppsFound> : <AppsContent searchedApps={searchedApps}></AppsContent>
+        }
+
+            
 
 
         </div>
