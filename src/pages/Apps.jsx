@@ -11,7 +11,7 @@ const Apps = () => {
     const term = search.trim().toLocaleLowerCase()
     const searchedApps = search ? apps.filter(ap=>ap.title.toLocaleLowerCase().includes(term)) : apps;
 
-    console.log(search);
+    // console.log(search);
 
     return (
         <div className="px-2 sm:px-4 lg:px-16 bg-[#E9E9E9]">

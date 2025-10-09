@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useAppsdata from "../hooks/useAppsdata";
 
@@ -13,18 +13,46 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { updateStoredApp } from "../Utility/LocalStorage";
+import { getStoredApp, updateStoredApp } from "../Utility/LocalStorage";
+import { InstallContext } from "../Layout/MainLayout";
 
 const AppDetails = () => {
+
+  // const [isInstalled, setIsInstalled] = useContext(InstallContext)
+
   const { id } = useParams();
   const { apps, loading } = useAppsdata();
   const app = apps.find((ap) => ap.id === Number(id));
 //   console.log(app);
 
+
+
+
+const [isInstalled, setIsInstalled] = useState(false)
+
+
+
+ 
+useEffect(() => {
+ const storedApp = getStoredApp()
+ const isAvilable = storedApp.some(p => p.id ===Number(id))
+ setIsInstalled(isAvilable)
+ console.log('is avilable ',isAvilable);
+
+}, [id])
+
+
+
+console.log('is istalled ', isInstalled);
+
+
+
+
+
  const handleInstall = (app) =>{
 
     updateStoredApp(app)
-
+    //  setIsInstalled(true)
 
  }
 
@@ -43,7 +71,7 @@ const AppDetails = () => {
       </p>
     );
 
-  console.log(id);
+  
   return (
     <div className=" bg-[#E9E9E9]">
       <div className="border-b-1 border-gray-600 flex flex-col lg:flex-row lg:items-center py-6 gap-4 lg:gap-12 px-4  md:px-6 lg:px-15">
@@ -97,7 +125,7 @@ const AppDetails = () => {
             {/* down - down  */}
             <div className="pt-4">
               <button onClick={()=>handleInstall(app)} className="bg-[#00D390] px-14 py-2.5 rounded-md font-semibold text-white text-lg shadow-md hover:shadow-lg cursor-pointer ">
-                Isntall Now ({app.size}GB)
+                Install Now ({app.size}GB)
               </button>
             </div>
           </div>

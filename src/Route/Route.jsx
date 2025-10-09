@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path:"/",
     Component:MainLayout,
+    errorElement:<h1 className='text-4xl font-bold text-red-500 text-center'>worng</h1>,
     children:[
         {
             index:true,
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
         },
         {
           path:"appDetails/:id",
-          Component:AppDetails
+          Component:AppDetails,
+           errorElement:<h1 className='text-4xl font-bold text-red-500 text-center'>Insid worng</h1>,
         }
     ]
   }
