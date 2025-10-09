@@ -5,6 +5,7 @@ import useAppsdata from '../hooks/useAppsdata';
 import downloadImg from '../assets/icon-downloads.png'
 import reviewImg from '../assets/icon-review.png'
 import ratingImg from '../assets/icon-ratings.png'
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 
 const AppDetails = () => {
@@ -19,10 +20,10 @@ const AppDetails = () => {
 
     console.log(id);
     return (
-        <div className='px-4  md:px-6 lg:px-15 bg-[#E9E9E9]'>
+        <div className=' bg-[#E9E9E9]'>
             
 
-            <div className='border-b-1 border-gray-600 flex flex-col lg:flex-row lg:items-center py-6 gap-4 lg:gap-12'>
+            <div className='border-b-1 border-gray-600 flex flex-col lg:flex-row lg:items-center py-6 gap-4 lg:gap-12 px-4  md:px-6 lg:px-15'>
 
             <div>
                 <img src={app.image} className='shadow-xl rounded-md scale-105' alt="" />
@@ -104,13 +105,53 @@ const AppDetails = () => {
 
             </div>
 
-            <div>
-                <h2>Chart</h2>
+
+
+
+            <div className='w-full py-8  pr-2 md:px-4 lg:px-13'>
+
+       <h2 className="text-lg font-semibold mb-3 ml-2 ">Ratings</h2>
+
+       <ResponsiveContainer width="100%" height={400} >
+
+        <BarChart
+         data={app.ratings}
+         layout="vertical"
+          margin={{ top: 3, right: 30, left: 0, bottom: 3 }}
+        >
+
+
+                <XAxis type="number" />
+              <YAxis
+                dataKey="name"
+                type="category"
+                tick={{ fontSize: 14 }}
+                width={80}
+              />
+  <Tooltip />
+
+          <Bar dataKey="count" fill="#f97316" barSize={25}  />
+
+
+
+        </BarChart>
+
+       </ResponsiveContainer>
+
+             
+
+
+
             </div>
 
 
+
+
+
+
+
        {/* description  */}
-            <div className='space-y-4 py-4 border-t-1 border-gray-700'>
+            <div className='space-y-4 py-4 border-t-1 border-gray-700 px-4  md:px-6 lg:px-15'>
 
             <h1 className='text-4xl font-bold '>Description</h1>
 
