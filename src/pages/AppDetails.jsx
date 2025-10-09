@@ -14,6 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import { getStoredApp, updateStoredApp } from "../Utility/LocalStorage";
+import { toast } from "react-toastify";
 
 
 const AppDetails = () => {
@@ -35,6 +36,7 @@ const AppDetails = () => {
   const handleInstall = (app) => {
     updateStoredApp(app);
     setIsInstalled(true);
+    toast.success(`Installed ${app.title} `)
   };
 
   if (loading)

@@ -2,6 +2,7 @@ import React from "react";
 import downloadImg from "../assets/icon-downloads.png";
 import ratingImg from "../assets/icon-ratings.png";
 import { getStoredApp, removeFromStorage } from "../Utility/LocalStorage";
+import { toast } from "react-toastify";
 
 const InstalledCard = ({ app, setInstalledApps }) => {
   const { image, title, size, id, ratingAvg, downloads } = app || {};
@@ -9,6 +10,7 @@ const InstalledCard = ({ app, setInstalledApps }) => {
   const handleUninstall = (id) => {
     removeFromStorage(id);
     setInstalledApps(getStoredApp());
+    toast.success('Uninstalled hur')
   };
 
   return (
