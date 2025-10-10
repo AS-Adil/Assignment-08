@@ -1,6 +1,6 @@
 [
   {
-    "image": "../src/assets/icon-01.webp",
+    "image": "/assets/icon-01.webp",
     "title": "Forest: Focus for Productivity",
     "companyName": "productive.io",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-02.webp",
+    "image": "/assets/icon-02.webp",
     "title": "SmPlan: ToDo List with Reminder",
     "companyName": "productive.io",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-03.webp",
+    "image": "/assets/icon-03.webp",
     "title": "FLIP - Focus Timer for Study",
     "companyName": "productive.io",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-008.webp",
+    "image": "/assets/icon-008.webp",
     "title": "Pomocat - Cute Pomodoro Timer",
     "companyName": "productive.io",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-009.webp",
+    "image": "/assets/icon-009.webp",
     "title": "Time Planner: Schedule & Tasks",
     "companyName": "productive.io",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-010.webp",
+    "image": "/assets/icon-010.webp",
     "title": "Flip Clock: World Clock",
     "companyName": "productive.io",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-011.webp",
+    "image": "/assets/icon-011.webp",
     "title": "Morning Habits - Daily Routine",
     "companyName": "productive.io",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-012.webp",
+    "image": "/assets/icon-012.webp",
     "title": "Focus Plant: Pomodoro Forest",
     "companyName": "productive.io",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-013.webp",
+    "image": "/assets/icon-013.webp",
     "title": "Alarmy - Alarm Clock & Sleep",
     "companyName": "productive.io",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-014.webp",
+    "image": "/assets/icon-014.webp",
     "title": "To-Do List - Schedule Planner",
     "companyName": "productive.io",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-037.webp",
+    "image": "/assets/icon-037.webp",
     "title": "TickTick: To Do List & Calendar",
     "companyName": "productive.io",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-038.webp",
+    "image": "/assets/icon-038.webp",
     "title": "Fabulous Daily Routine Planner",
     "companyName": "productive.io",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-039.webp",
+    "image": "/assets/icon-039.webp",
     "title": "To-Do Adventure: Task Tracker",
     "companyName": "productive.io",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-023.webp",
+    "image": "/assets/icon-023.webp",
     "title": "YourHour - ScreenTime App",
     "companyName": "productive.io",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-024.webp",
+    "image": "/assets/icon-024.webp",
     "title": "Timelog - Goal & Time Tracker",
     "companyName": "productive.io",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-025.webp",
+    "image": "/assets/icon-025.webp",
     "title": "HabitNow Daily Routine Planner",
     "companyName": "productive.io",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-026.webp",
+    "image": "/assets/icon-026.webp",
     "title": "Motivated: Habit Tracker",
     "companyName": "productive.io",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-027.webp",
+    "image": "/assets/icon-027.webp",
     "title": "Listok: To do list & Notes",
     "companyName": "productive.io",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-028.webp",
+    "image": "/assets/icon-028.webp",
     "title": "Sectograph: Day & Time Planner",
     "companyName": "productive.io",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "../src/assets/icon-029.webp",
+    "image": "/assets/icon-029.webp",
     "title": "Boosted Time Tracker",
     "companyName": "productive.io",
     "id": 20,
