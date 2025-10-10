@@ -55,7 +55,7 @@ const Navbar = () => {
 
       
 
-    <a href='https://github.com/' target='blank'  className="shadow-sm hover:shadow-md px-4 py-2 font-semibold rounded-md text-lg text-white bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]  flex items-center gap-1.5"> <VscGithub size={20} className=' rounded-full bg-white text-black mt-1'></VscGithub>Contribute</a>
+    <a href='https://github.com/AS-Adil' target='blank'  className="shadow-sm hover:shadow-md px-4 py-2 font-semibold rounded-md text-lg text-white bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]  flex items-center gap-1.5"> <VscGithub size={20} className=' rounded-full bg-white text-black mt-1'></VscGithub>Contribute</a>
   
     
   </div>
