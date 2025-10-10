@@ -15,6 +15,8 @@ import {
 } from "recharts";
 import { getStoredApp, updateStoredApp } from "../Utility/LocalStorage";
 import { toast } from "react-toastify";
+import NotFound from "../Components/NotFound";
+import Loader from "../Components/Loader";
 
 
 const AppDetails = () => {
@@ -36,23 +38,16 @@ const AppDetails = () => {
   const handleInstall = (app) => {
     updateStoredApp(app);
     setIsInstalled(true);
-    toast.success(`Installed ${app.title} `)
+    toast.success(`${app.title} Installed Succesfully`)
   };
 
   if (loading)
-    return (
-      <p className="font-bold text-5xl text-center text-red-600">
-        loading.......
-      </p>
-    );
+    return <Loader></Loader>
   if (!app)
-    return (
-      <p className="font-bold text-5xl text-center text-red-600">
-        Not Found.......
-      </p>
-    );
+    return <NotFound></NotFound>
 
   return (
+    
     <div className=" bg-[#E9E9E9]">
       <div className="border-b-1 border-gray-600 flex flex-col lg:flex-row lg:items-center py-6 gap-4 lg:gap-12 px-4  md:px-6 lg:px-15">
         <div>
@@ -121,12 +116,12 @@ const AppDetails = () => {
         <h2 className="text-lg font-semibold mb-3 ml-2 ">Ratings</h2>
 
         <ResponsiveContainer width="100%" height={400}>
-          <BarChart
-            data={app.ratings}
+          <BarChart 
+            data={[...app.ratings].reverse()}
             layout="vertical"
             margin={{ top: 3, right: 30, left: 0, bottom: 3 }}
           >
-            <XAxis type="number" />
+            <XAxis type="number"/>
             <YAxis
               dataKey="name"
               type="category"

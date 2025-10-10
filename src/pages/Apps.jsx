@@ -23,7 +23,7 @@ const Apps = () => {
             </div>
 
 
-                        <div className='flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between py-5 items-center'>
+                        <div className='flex flex-col sm:flex-row gap-3 sm:gap-0 justify-between py-5 items-center'>
                 <div className='text-xl font-semibold '>
                     <h1>({searchedApps.length})<span className='ml-1.5'>Apps found</span></h1>
                 </div>

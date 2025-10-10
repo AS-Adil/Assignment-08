@@ -10,7 +10,7 @@ const InstalledCard = ({ app, setInstalledApps }) => {
   const handleUninstall = (id) => {
     removeFromStorage(id);
     setInstalledApps(getStoredApp());
-    toast.success('Uninstalled hur')
+    toast.success(`Uninstalled ${title} from your Device`)
   };
 
   return (

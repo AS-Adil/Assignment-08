@@ -13,7 +13,7 @@ const useAppsdata = () => {
         SetLoading(true)
         axios('../appsData.json').then(data=>SetApps(data.data))
         .catch(err =>setError(err))
-        .finally(SetLoading(false))
+        .finally(()=> SetLoading(false))
 
     }, [])
     
