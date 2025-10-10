@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { getStoredApp } from "../Utility/LocalStorage";
-
-
 import InstalledCard from "../Components/InstalledCard";
+import useAppsdata from "../hooks/useAppsdata";
+import Loader from "../Components/Loader";
+
+
 const Installations = () => {
   const [installedApps, setInstalledApps] = useState(getStoredApp());
 
+  const {apps, loading} = useAppsdata()
+
   const [sortOrder, setSortOrder] = useState("none");
+
+
+  if(loading) return <Loader></Loader>
 
   const sortedApps = (() => {
     if (sortOrder === "download-desc") {

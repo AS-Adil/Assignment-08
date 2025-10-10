@@ -16,7 +16,7 @@ const Banner = () => {
           </div>
 
           <p className="w-[100%] sm:w-[80%] md:w-[70%] xl:w-[65%] mx-auto text-center text-gray-600 ">
-            At HERO.IO , we craft innovative apps designed to make everyday life
+            AppPulse , we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting. Our goal is to turn your ideas
             into digital experiences that truly make an impact
           </p>

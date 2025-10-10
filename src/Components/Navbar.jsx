@@ -29,9 +29,8 @@ const Navbar = () => {
     
       </ul>
     </div>
-    <Link to={"/"} className=" py-2 whitespace-nowrap  font-semibold rounded-full text-[#632EE3] cursor-pointer  text-xl flex gap-1 items-center">
-    <img src={logo} className='w-11' />
-    HERO.IO</Link>
+    <Link to={"/"} className=" py-2 whitespace-nowrap  font-bold rounded-full text-[#632EE3] cursor-pointer  text-2xl  flex gap-1 items-center">
+    <img src={logo} className='w-11' />AppPulse</Link>
   </div>
 
 

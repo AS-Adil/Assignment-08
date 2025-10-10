@@ -1,17 +1,45 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AppsContent from '../Components/AppsContent';
 import useAppsdata from '../hooks/useAppsdata';
 import NoAppsFound from '../Components/NoAppsFound';
+import Loader from "../Components/Loader";
+
 
 const Apps = () => {
 
-    const {apps} = useAppsdata()
+    const {apps,loading} = useAppsdata()
     const [search, setSearch] = useState('')
-    const term = search.trim().toLocaleLowerCase()
-    const searchedApps = search ? apps.filter(ap=>ap.title.toLocaleLowerCase().includes(term)) : apps;
 
-    // console.log(search);
+const [searchedApps, setSearchedApps] = useState([])
+const [searchLoading, setSearchLoading] = useState(false)
+
+
+      useEffect(() => {
+    if (loading) return; // wait until data is loaded first
+
+    // when user types, show loader
+    setSearchLoading(true);
+
+    const timer = setTimeout(() => {
+      const term = search.trim().toLowerCase();
+      const filtered = search
+        ? apps.filter((ap) => ap.title.toLowerCase().includes(term))
+        : apps;
+
+      setSearchedApps(filtered);
+      setSearchLoading(false);
+    }, 400);
+    return () => clearTimeout(timer); 
+  }, [search, apps, loading]);
+
+
+
+
+
+    if(loading) return <Loader></Loader>
+
+
 
     return (
         <div className="px-2 sm:px-4 lg:px-16 bg-[#E9E9E9]">
@@ -40,9 +68,13 @@ const Apps = () => {
             </div>
 
 
-        {
-            searchedApps.length===0 ? <NoAppsFound></NoAppsFound> : <AppsContent searchedApps={searchedApps}></AppsContent>
-        }
+      {searchLoading ? (
+        <Loader />
+      ) : searchedApps.length === 0 ? (
+        <NoAppsFound />
+      ) : (
+        <AppsContent searchedApps={searchedApps} />
+      )}
 
             
 

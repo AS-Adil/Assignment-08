@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'; // Using React icons for social media
 import logo from '../assets/logo.png'; // Importing the logo image
+import { Link } from 'react-router';
 
 const Footer = () => {
   return (
@@ -13,19 +14,18 @@ const Footer = () => {
               <div>
               <img src={logo}  className="w-8 mb-4" />
               </div>
-               <h1 className='text-xl font-bold'>Hero Apps</h1>
+               <Link to={"/"} className='text-xl font-bold'>AppPulse</Link>
            </div>
 
 
           <p>
-            Hero Apps offers a collection of powerful applications designed to enhance your productivity. 
+            AppPulse offers a collection of powerful applications designed to enhance your productivity. 
             Explore our apps, read details, and get installation options.
           </p>
         </div>
 
-        {/* About Hero Apps */}
         <div className="text-left">
-          <h4 className=" text-lg font-semibold mb-4">About Hero Apps</h4>
+          <h4 className=" text-lg font-semibold mb-4">About AppPulse</h4>
           <ul className="space-y-2">
             <li><a href="" className="text-white hover:underline">Newsroom</a></li>
             <li><a href="" className="text-white hover:underline">Leadership</a></li>
